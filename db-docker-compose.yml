@@ -1,0 +1,11 @@
+version: '3'
+services:
+  salgu-api-db:
+    image: mysql
+    container_name: salgu-api-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+    volumes:
+      - ~/project/salgu/db-volume/api:/var/lib/mysql
+    ports:
+      - 3307:3306
