@@ -1,0 +1,175 @@
+2023-07-02 00:08:11.829 [1;31mERROR[0;39m [35m403 [0;39m --- [main] [, ] [36mo.s.b.SpringApplication[0;39m : Application run failed
+org.springframework.boot.context.config.InvalidConfigDataPropertyException: Property 'spring.profiles.include' imported from location 'class path resource [application-db.yml]' is invalid in a profile specific resource [origin: class path resource [application-db.yml] - 3:14]
+	at org.springframework.boot.context.config.InvalidConfigDataPropertyException.lambda$throwIfPropertyFound$1(InvalidConfigDataPropertyException.java:121)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1092)
+	at org.springframework.boot.context.config.InvalidConfigDataPropertyException.throwIfPropertyFound(InvalidConfigDataPropertyException.java:118)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.checkForInvalidProperties(ConfigDataEnvironment.java:364)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.applyToEnvironment(ConfigDataEnvironment.java:328)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:235)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:356)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.salgu.salguapi.SalguApiApplication.main(SalguApiApplication.java:10)
+2023-07-02 00:11:07.554 [34mINFO [0;39m [35m437 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Starting SalguApiApplication using Java 17.0.6 with PID 6875 (/Users/salgu/project/salgu/salgu-api/build/classes/java/main started by salgu in /Users/salgu/project/salgu/salgu-api)
+2023-07-02 00:11:07.556 [34mINFO [0;39m [35m439 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : The following 3 profiles are active: "db", "local", "db-local"
+2023-07-02 00:11:07.866 [34mINFO [0;39m [35m749 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-02 00:11:07.884 [34mINFO [0;39m [35m767 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2023-07-02 00:11:08.149 [34mINFO [0;39m [35m1032[0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat initialized with port(s): 9001 (http)
+2023-07-02 00:11:08.217 [34mINFO [0;39m [35m1100[0;39m --- [main] [, ] [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m : Root WebApplicationContext: initialization completed in 639 ms
+2023-07-02 00:11:08.689 [34mINFO [0;39m [35m1572[0;39m --- [main] [, ] [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-02 00:11:08.894 [34mINFO [0;39m [35m1777[0;39m --- [main] [, ] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02 00:11:09.118 [34mINFO [0;39m [35m2001[0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat started on port(s): 9001 (http) with context path ''
+2023-07-02 00:11:09.125 [34mINFO [0;39m [35m2008[0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Started SalguApiApplication in 1.783 seconds (process running for 2.142)
+2023-07-02 00:11:39.434 [34mINFO [0;39m [35m32317[0;39m --- [SpringApplicationShutdownHook] [, ] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02 00:13:31.258 [34mINFO [0;39m [35m414 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Starting SalguApiApplication using Java 17.0.6 with PID 6884 (/Users/salgu/project/salgu/salgu-api/build/classes/java/main started by salgu in /Users/salgu/project/salgu/salgu-api)
+2023-07-02 00:13:31.259 [34mINFO [0;39m [35m415 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : The following 3 profiles are active: "db", "local", "db-local"
+2023-07-02 00:13:31.552 [34mINFO [0;39m [35m708 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-02 00:13:31.568 [34mINFO [0;39m [35m724 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-07-02 00:13:31.816 [34mINFO [0;39m [35m972 [0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat initialized with port(s): 9001 (http)
+2023-07-02 00:13:31.877 [34mINFO [0;39m [35m1033[0;39m --- [main] [, ] [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m : Root WebApplicationContext: initialization completed in 597 ms
+2023-07-02 00:13:32.302 [34mINFO [0;39m [35m1458[0;39m --- [main] [, ] [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-02 00:13:32.515 [34mINFO [0;39m [35m1671[0;39m --- [main] [, ] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02 00:13:32.718 [34mINFO [0;39m [35m1874[0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat started on port(s): 9001 (http) with context path ''
+2023-07-02 00:13:32.723 [34mINFO [0;39m [35m1879[0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Started SalguApiApplication in 1.672 seconds (process running for 2.019)
+2023-07-02 00:14:07.831 [34mINFO [0;39m [35m36987[0;39m --- [SpringApplicationShutdownHook] [, ] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02 00:14:09.245 [34mINFO [0;39m [35m439 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Starting SalguApiApplication using Java 17.0.6 with PID 6888 (/Users/salgu/project/salgu/salgu-api/build/classes/java/main started by salgu in /Users/salgu/project/salgu/salgu-api)
+2023-07-02 00:14:09.246 [34mINFO [0;39m [35m440 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : The following 2 profiles are active: "db", "local"
+2023-07-02 00:14:09.525 [34mINFO [0;39m [35m719 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-02 00:14:09.542 [34mINFO [0;39m [35m736 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2023-07-02 00:14:09.790 [34mINFO [0;39m [35m984 [0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat initialized with port(s): 9001 (http)
+2023-07-02 00:14:09.852 [34mINFO [0;39m [35m1046[0;39m --- [main] [, ] [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m : Root WebApplicationContext: initialization completed in 587 ms
+2023-07-02 00:14:10.270 [34mINFO [0;39m [35m1464[0;39m --- [main] [, ] [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-02 00:14:10.448 [34mINFO [0;39m [35m1642[0;39m --- [main] [, ] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02 00:14:10.636 [34mINFO [0;39m [35m1830[0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat started on port(s): 9001 (http) with context path ''
+2023-07-02 00:14:10.641 [34mINFO [0;39m [35m1835[0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Started SalguApiApplication in 1.65 seconds (process running for 1.954)
+2023-07-02 00:14:21.819 [34mINFO [0;39m [35m13013[0;39m --- [SpringApplicationShutdownHook] [, ] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02 00:14:22.883 [34mINFO [0;39m [35m461 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Starting SalguApiApplication using Java 17.0.6 with PID 6907 (/Users/salgu/project/salgu/salgu-api/build/classes/java/main started by salgu in /Users/salgu/project/salgu/salgu-api)
+2023-07-02 00:14:22.884 [34mINFO [0;39m [35m462 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : The following 1 profile is active: "local"
+2023-07-02 00:14:23.170 [34mINFO [0;39m [35m748 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-02 00:14:23.187 [34mINFO [0;39m [35m765 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
+2023-07-02 00:14:23.433 [34mINFO [0;39m [35m1011[0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat initialized with port(s): 9001 (http)
+2023-07-02 00:14:23.487 [34mINFO [0;39m [35m1065[0;39m --- [main] [, ] [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m : Root WebApplicationContext: initialization completed in 579 ms
+2023-07-02 00:14:23.530 [31mWARN [0;39m [35m1108[0;39m --- [main] [, ] [36mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-07-02 00:14:23.542 [34mINFO [0;39m [35m1120[0;39m --- [main] [, ] [36mo.s.b.a.l.ConditionEvaluationReportLogger[0;39m : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-07-02 00:14:23.551 [1;31mERROR[0;39m [35m1129[0;39m --- [main] [, ] [36mo.s.b.d.LoggingFailureAnalysisReporter[0;39m : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles local are currently active).
+
+2023-07-02 00:14:48.425 [34mINFO [0;39m [35m375 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Starting SalguApiApplication using Java 17.0.6 with PID 6911 (/Users/salgu/project/salgu/salgu-api/build/classes/java/main started by salgu in /Users/salgu/project/salgu/salgu-api)
+2023-07-02 00:14:48.427 [34mINFO [0;39m [35m377 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : The following 2 profiles are active: "db", "local"
+2023-07-02 00:14:48.717 [34mINFO [0;39m [35m667 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-02 00:14:48.734 [34mINFO [0;39m [35m684 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
+2023-07-02 00:14:48.985 [34mINFO [0;39m [35m935 [0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat initialized with port(s): 9001 (http)
+2023-07-02 00:14:49.048 [34mINFO [0;39m [35m998 [0;39m --- [main] [, ] [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m : Root WebApplicationContext: initialization completed in 599 ms
+2023-07-02 00:14:49.497 [34mINFO [0;39m [35m1447[0;39m --- [main] [, ] [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-02 00:14:49.714 [34mINFO [0;39m [35m1664[0;39m --- [main] [, ] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02 00:14:49.900 [34mINFO [0;39m [35m1850[0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat started on port(s): 9001 (http) with context path ''
+2023-07-02 00:14:49.906 [34mINFO [0;39m [35m1856[0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Started SalguApiApplication in 1.673 seconds (process running for 1.983)
+2023-07-02 00:15:49.344 [34mINFO [0;39m [35m61294[0;39m --- [SpringApplicationShutdownHook] [, ] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02 00:15:50.432 [34mINFO [0;39m [35m366 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Starting SalguApiApplication using Java 17.0.6 with PID 6926 (/Users/salgu/project/salgu/salgu-api/build/classes/java/main started by salgu in /Users/salgu/project/salgu/salgu-api)
+2023-07-02 00:15:50.434 [34mINFO [0;39m [35m368 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : The following 2 profiles are active: "db", "local"
+2023-07-02 00:15:50.710 [34mINFO [0;39m [35m644 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-02 00:15:50.726 [34mINFO [0;39m [35m660 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-07-02 00:15:50.978 [34mINFO [0;39m [35m912 [0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat initialized with port(s): 9001 (http)
+2023-07-02 00:15:51.036 [34mINFO [0;39m [35m970 [0;39m --- [main] [, ] [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m : Root WebApplicationContext: initialization completed in 583 ms
+2023-07-02 00:15:51.454 [34mINFO [0;39m [35m1388[0;39m --- [main] [, ] [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-02 00:15:51.641 [34mINFO [0;39m [35m1575[0;39m --- [main] [, ] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02 00:15:51.833 [34mINFO [0;39m [35m1767[0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat started on port(s): 9001 (http) with context path ''
+2023-07-02 00:15:51.841 [34mINFO [0;39m [35m1775[0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Started SalguApiApplication in 1.598 seconds (process running for 1.868)
+2023-07-02 00:16:12.774 [34mINFO [0;39m [35m22708[0;39m --- [SpringApplicationShutdownHook] [, ] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02 00:16:14.137 [34mINFO [0;39m [35m472 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Starting SalguApiApplication using Java 17.0.6 with PID 6932 (/Users/salgu/project/salgu/salgu-api/build/classes/java/main started by salgu in /Users/salgu/project/salgu/salgu-api)
+2023-07-02 00:16:14.138 [34mINFO [0;39m [35m473 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : The following 2 profiles are active: "db", "dev"
+2023-07-02 00:16:14.572 [34mINFO [0;39m [35m907 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-02 00:16:14.589 [34mINFO [0;39m [35m924 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2023-07-02 00:16:14.845 [34mINFO [0;39m [35m1180[0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat initialized with port(s): 9001 (http)
+2023-07-02 00:16:14.909 [34mINFO [0;39m [35m1244[0;39m --- [main] [, ] [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m : Root WebApplicationContext: initialization completed in 749 ms
+2023-07-02 00:16:15.352 [34mINFO [0;39m [35m1687[0;39m --- [main] [, ] [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-02 00:16:15.546 [34mINFO [0;39m [35m1881[0;39m --- [main] [, ] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02 00:16:15.742 [34mINFO [0;39m [35m2077[0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat started on port(s): 9001 (http) with context path ''
+2023-07-02 00:16:15.750 [34mINFO [0;39m [35m2085[0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Started SalguApiApplication in 1.825 seconds (process running for 2.21)
+2023-07-02 00:16:25.387 [34mINFO [0;39m [35m11722[0;39m --- [SpringApplicationShutdownHook] [, ] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02 00:16:26.550 [34mINFO [0;39m [35m473 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Starting SalguApiApplication using Java 17.0.6 with PID 6938 (/Users/salgu/project/salgu/salgu-api/build/classes/java/main started by salgu in /Users/salgu/project/salgu/salgu-api)
+2023-07-02 00:16:26.552 [34mINFO [0;39m [35m475 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : The following 2 profiles are active: "db", "dev"
+2023-07-02 00:16:27.010 [34mINFO [0;39m [35m933 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-02 00:16:27.028 [34mINFO [0;39m [35m951 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
+2023-07-02 00:16:27.287 [34mINFO [0;39m [35m1210[0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat initialized with port(s): 9001 (http)
+2023-07-02 00:16:27.353 [34mINFO [0;39m [35m1276[0;39m --- [main] [, ] [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m : Root WebApplicationContext: initialization completed in 774 ms
+2023-07-02 00:16:28.747 [34mINFO [0;39m [35m2670[0;39m --- [main] [, ] [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-02 00:16:29.999 [34mINFO [0;39m [35m3922[0;39m --- [main] [, ] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02 00:16:30.326 [34mINFO [0;39m [35m4249[0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat started on port(s): 9001 (http) with context path ''
+2023-07-02 00:16:30.332 [34mINFO [0;39m [35m4255[0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Started SalguApiApplication in 4.014 seconds (process running for 4.414)
+2023-07-02 00:16:31.706 [34mINFO [0;39m [35m5629[0;39m --- [SpringApplicationShutdownHook] [, ] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02 00:16:50.487 [34mINFO [0;39m [35m390 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Starting SalguApiApplication using Java 17.0.6 with PID 6944 (/Users/salgu/project/salgu/salgu-api/build/classes/java/main started by salgu in /Users/salgu/project/salgu/salgu-api)
+2023-07-02 00:16:50.488 [34mINFO [0;39m [35m391 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : The following 2 profiles are active: "dba", "dev"
+2023-07-02 00:16:50.804 [34mINFO [0;39m [35m707 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-02 00:16:50.822 [34mINFO [0;39m [35m725 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2023-07-02 00:16:51.098 [34mINFO [0;39m [35m1001[0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat initialized with port(s): 9001 (http)
+2023-07-02 00:16:51.169 [34mINFO [0;39m [35m1072[0;39m --- [main] [, ] [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m : Root WebApplicationContext: initialization completed in 658 ms
+2023-07-02 00:16:51.205 [31mWARN [0;39m [35m1108[0;39m --- [main] [, ] [36mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2023-07-02 00:16:51.216 [34mINFO [0;39m [35m1119[0;39m --- [main] [, ] [36mo.s.b.a.l.ConditionEvaluationReportLogger[0;39m : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-07-02 00:16:51.225 [1;31mERROR[0;39m [35m1128[0;39m --- [main] [, ] [36mo.s.b.d.LoggingFailureAnalysisReporter[0;39m : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles dba,dev are currently active).
+
+2023-07-02 00:17:12.015 [34mINFO [0;39m [35m396 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Starting SalguApiApplication using Java 17.0.6 with PID 6948 (/Users/salgu/project/salgu/salgu-api/build/classes/java/main started by salgu in /Users/salgu/project/salgu/salgu-api)
+2023-07-02 00:17:12.017 [34mINFO [0;39m [35m398 [0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : The following 2 profiles are active: "db", "dev"
+2023-07-02 00:17:12.334 [34mINFO [0;39m [35m715 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-02 00:17:12.350 [34mINFO [0;39m [35m731 [0;39m --- [main] [, ] [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-07-02 00:17:12.627 [34mINFO [0;39m [35m1008[0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat initialized with port(s): 9001 (http)
+2023-07-02 00:17:12.693 [34mINFO [0;39m [35m1074[0;39m --- [main] [, ] [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m : Root WebApplicationContext: initialization completed in 655 ms
+2023-07-02 00:17:14.003 [34mINFO [0;39m [35m2384[0;39m --- [main] [, ] [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-02 00:17:15.166 [34mINFO [0;39m [35m3547[0;39m --- [main] [, ] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02 00:17:15.358 [34mINFO [0;39m [35m3739[0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat started on port(s): 9001 (http) with context path ''
+2023-07-02 00:17:15.364 [34mINFO [0;39m [35m3745[0;39m --- [main] [, ] [36mc.s.s.SalguApiApplication[0;39m : Started SalguApiApplication in 3.549 seconds (process running for 3.893)
+2023-07-02 00:17:20.199 [34mINFO [0;39m [35m8580[0;39m --- [SpringApplicationShutdownHook] [, ] [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m : Closing JPA EntityManagerFactory for persistence unit 'default'
