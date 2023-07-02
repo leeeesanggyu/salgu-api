@@ -22,13 +22,15 @@ spring:
     generate-ddl: true
     open-in-view: false
 
+profile:
+  message: "hi, local!"
 --- # dev properties
 spring:
   config:
     activate:
       on-profile: "dev"
   datasource:
-    url: jdbc:mysql://localhost:3307/api?useSSL=true&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://${DB_URL:localhost}:3307/api?useSSL=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -43,3 +45,6 @@ spring:
         ddl-auto: create-drop
     generate-ddl: true
     open-in-view: false
+
+profile:
+  message: "hi, dev!"

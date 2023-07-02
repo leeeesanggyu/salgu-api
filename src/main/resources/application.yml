@@ -1,5 +1,8 @@
+# java -Dspring.profiles.active=dev -jar salgu-api-0.0.1-SNAPSHOT.jar
+# docker build -t salgu-api:v1 .
+# docker run -d -e PROFILE=dev -e DB_URL=salgu-api-db salgu-api:v1 --name salgu-api -p 18081:18080
 server:
-  port: 9001
+  port: 18080
 
 logging:
   level:
