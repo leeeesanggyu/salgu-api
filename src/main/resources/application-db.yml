@@ -4,7 +4,7 @@
 spring:
   config:
     activate:
-      on-profile: "local"
+      on-profile: local
   datasource:
     url: jdbc:mysql://localhost:3307/api?useSSL=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
@@ -28,7 +28,7 @@ profile:
 spring:
   config:
     activate:
-      on-profile: "dev"
+      on-profile: dev
   datasource:
     url: jdbc:mysql://${DB_URL:localhost}:3307/api?useSSL=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
