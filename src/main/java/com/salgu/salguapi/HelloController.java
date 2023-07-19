@@ -1,6 +1,10 @@
 package com.salgu.salguapi;
 
 import com.salgu.salguapi.util.response.ResponseWithData;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -8,6 +12,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 @Slf4j
 @RestController
@@ -23,8 +30,30 @@ public class HelloController {
 
     @GetMapping("/hello")
     public ResponseWithData hello() {
-        log.info("HelloController.hello(), {}, {}", message, dbUrl);
-        return ResponseWithData.success(message);
+        HelloDto helloDto = null;
+        try {
+            helloDto = HelloDto.builder()
+                    .message(message)
+                    .dbUrl(dbUrl)
+                    .version("v4")
+                    .hostName(InetAddress.getLocalHost().getHostName())
+                    .ip(InetAddress.getLocalHost().getHostAddress())
+                    .build();
+        } catch (UnknownHostException e) {
+            throw new RuntimeException(e);
+        }
+        log.info("HelloController.hello() => {}", helloDto);
+        return ResponseWithData.success(helloDto);
+    }
+
+    @Data
+    @Builder
+    public static class HelloDto {
+        private String message;
+        private String dbUrl;
+        private String hostName;
+        private String ip;
+        private String version;
     }
 
     @GetMapping("/status")
