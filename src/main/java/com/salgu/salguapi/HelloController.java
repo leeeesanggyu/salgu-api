@@ -29,6 +29,7 @@ public class HelloController {
 
     @GetMapping("/status")
     public ResponseEntity getStatus() {
+        log.info("kubernetes liveness probe healthCheck call");
         if (applicationStatus == false) {
             return new ResponseEntity<>("now => " + applicationStatus, HttpStatus.INTERNAL_SERVER_ERROR);
         }
