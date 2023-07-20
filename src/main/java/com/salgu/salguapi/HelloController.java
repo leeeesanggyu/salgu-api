@@ -1,12 +1,10 @@
 package com.salgu.salguapi;
 
 import com.salgu.salguapi.util.response.ResponseWithData;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +16,7 @@ import java.net.UnknownHostException;
 
 @Slf4j
 @RestController
+@RequiredArgsConstructor
 public class HelloController {
 
     @Value("${profile.message}")
@@ -25,6 +24,8 @@ public class HelloController {
 
     @Value("${spring.datasource.url}")
     private String dbUrl;
+
+    private final Environment env;
 
     private Boolean applicationStatus = true;
 
@@ -35,9 +36,10 @@ public class HelloController {
             helloDto = HelloDto.builder()
                     .message(message)
                     .dbUrl(dbUrl)
-                    .version("v4")
+                    .version(env.getProperty("VERSION"))
                     .hostName(InetAddress.getLocalHost().getHostName())
                     .ip(InetAddress.getLocalHost().getHostAddress())
+                    .profiles(env.getProperty("PROFILE") != null ? env.getProperty("PROFILE") : "local")
                     .build();
         } catch (UnknownHostException e) {
             throw new RuntimeException(e);
@@ -54,6 +56,7 @@ public class HelloController {
         private String hostName;
         private String ip;
         private String version;
+        private String profiles;
     }
 
     @GetMapping("/status")
